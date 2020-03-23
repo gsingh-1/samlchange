@@ -437,7 +437,7 @@ class Utils
 
         $inputKeyAlgo = $inputKey->getAlgorithm();
         if ($symmetricKeyInfo->isEncrypted) {
-            $symKeyInfoAlgo = $symmetricKeyInfo->getAlgorithm();
+            $symKeyInfoAlgo = $symmetricKey->getAlgorithm();
 
             if (in_array($symKeyInfoAlgo, $blacklist, true)) {
                 throw new \Exception('Algorithm disabled: '.var_export($symKeyInfoAlgo, true));

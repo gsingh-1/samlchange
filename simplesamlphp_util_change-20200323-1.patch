@@ -1,0 +1,13 @@
+diff --git a/simplesamlphp/saml2/src/SAML2/Utils.php b/simplesamlphp/saml2/src/SAML2/Utils.php
+index 0dd6b31..c4228ae 100644
+--- a/simplesamlphp/saml2/src/SAML2/Utils.php
++++ b/simplesamlphp/saml2/src/SAML2/Utils.php
+@@ -437,7 +437,7 @@ class Utils
+ 
+         $inputKeyAlgo = $inputKey->getAlgorithm();
+         if ($symmetricKeyInfo->isEncrypted) {
+-            $symKeyInfoAlgo = $symmetricKeyInfo->getAlgorithm();
++            $symKeyInfoAlgo = $symmetricKey->getAlgorithm();
+ 
+             if (in_array($symKeyInfoAlgo, $blacklist, true)) {
+                 throw new \Exception('Algorithm disabled: '.var_export($symKeyInfoAlgo, true));
